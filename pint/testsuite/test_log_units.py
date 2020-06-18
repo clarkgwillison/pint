@@ -160,7 +160,7 @@ def test_compound_log_unit_multiply_definition(auto_ureg):
     """
     Q_ = auto_ureg.Quantity
     canonical_def = Q_(-161, "dBm") / auto_ureg.Hz
-    mult_def = -161 * auto_ureg["dBm/Hz"]
+    mult_def = -161 * auto_ureg("dBm/Hz")
     assert mult_def == canonical_def
 
 
